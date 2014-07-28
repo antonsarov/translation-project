@@ -1,4 +1,4 @@
-translation-project
+Play Framework Documentation: A Bulgarian Translation
 ===================
 
-Play Framework Documentation Bulgarian Translation
+Play Framework Documentation: A Bulgarian Translation

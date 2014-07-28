@@ -1,29 +1,29 @@
 <!--- Copyright (C) 2009-2013 Typesafe Inc. <http://www.typesafe.com> -->
 ### Начало
 
-- [[Installing Play|Installing]]
-- [[Creating a new application|NewApplication]]
-- [[Anatomy of a Play application|Anatomy]]
-- [[Using the Play console|PlayConsole]]
-- [[Setting-up your preferred IDE|IDE]]
+- [[Инсталиране на Play|Installing]]
+- [[Създаване на ново приложение|NewApplication]]
+- [[Анатомия на едно Play приложение|Anatomy]]
+- [[Използване на Play конзолата|PlayConsole]]
+- [[Настройки за IDE|IDE]]
 - [[Play Tutorials|Tutorials]]
 - [Security policy](http://www.playframework.com/code/security)
 
-### Working with Play
+### Работа с Play
 
 - [[Play за Scala разработчици|ScalaHome]]
 - [[Play за Java разработчици|JavaHome]]
 
 ### Detailed topics
 
-- [[The Build system|Build]]
+- [[Build системата|Build]]
 - [[Working with public assets|Assets]]
 - [[Working with the in-memory H2 database|Developing-with-the-H2-Database]]
 - [[Managing database evolutions|Evolutions]]
-- [[Configuration|Configuration]]
+- [[Конфигурация|Configuration]]
 - [[Deploying your application|Production]]
 
-### Additional documentation
+### Допълнителна документация
 
 - [Scala](http://docs.scala-lang.org/)
 - [Akka](http://akka.io/docs/)
@@ -40,14 +40,14 @@
 - [[Contributor guidelines|Guidelines]]
 - [[Documentation guidelines|Documentation]]
 - [[Translating Documentation|Translations]]
-- [[Working with Git|WorkingWithGit]]
+- [[Работа с Git|WorkingWithGit]]
 
-### About Play
+### За Play
 
-- [[Play Philosophy|Philosophy]]
+- [[Play философията|Philosophy]]
 - [[Play User Groups|PlayUserGroups]]
 
-### Modules and plugins
+### Модули и плъгини
 
 - [[Temporary modules directory|Modules]]
 

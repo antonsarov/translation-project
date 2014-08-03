@@ -14,7 +14,7 @@
 - [[Play за Scala разработчици|ScalaHome]]
 - [[Play за Java разработчици|JavaHome]]
 
-### Detailed topics
+### Подробни теми
 
 - [[Build системата|Build]]
 - [[Working with public assets|Assets]]

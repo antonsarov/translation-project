@@ -1,13 +1,13 @@
 <!--- Copyright (C) 2009-2013 Typesafe Inc. <http://www.typesafe.com> -->
 # Play %PLAY_VERSION% документация
 
-> Play is a high-productivity Java and Scala web application framework that integrates the components and APIs you need for modern web application development. 
+> Play е Java и Scala framework за уеб приложения, който съдържа компонентите и API (приложно-програмни интерфейси), които са нужни за разработка на модерни уеб приложения. 
 >
-> Play is based on a lightweight, stateless, web-friendly architecture and features predictable and minimal resource consumption (CPU, memory, threads) for highly-scalable applications thanks to its reactive model, based on Iteratee IO.
+> Play базира на олекотена, stateless, уеб-ориентирана архитектура и се отличава с предвидима и минимална консумация на ресурси (CPU, памет, нишки) за високо мащабируеми приложения, благодарение на реактивния си модел, базиран на Iteratee IO.
 
-- [[Какво ново в Play 2.3?|Highlights23]] / [[Play 2.3 Migration Guide|Migration23]]
-- [[Какво ново в Play 2.2?|Highlights22]] / [[Play 2.2 Migration Guide|Migration22]]
-- [[Какво ново в Play 2.1?|Highlights21]] / [[Play 2.1 Migration Guide|Migration21]]
+- [[Какво ново в Play 2.3?|Highlights23]] / [[Play 2.3 ръководство за миграция|Migration23]]
+- [[Какво ново в Play 2.2?|Highlights22]] / [[Play 2.2 ръководство за миграция|Migration22]]
+- [[Какво ново в Play 2.1?|Highlights21]] / [[Play 2.1 ръководство за миграция|Migration21]]
 
 ## Начало
 
@@ -24,12 +24,12 @@
 1. [[Play за Scala разработчици|ScalaHome]]
 1. [[Play за Java разработчици|JavaHome]]
 
-## Detailed topics
+## Подробни теми
 
 1. [[Build системата|Build]]
-    1. [[About sbt settings|SBTSettings]]
-    1. [[Manage application dependencies|SBTDependencies]]
-    1. [[Working with sub-projects|SBTSubProjects]]
+    1. [[За sbt настройките|SBTSettings]]
+    1. [[Управление на application dependencies|SBTDependencies]]
+    1. [[Работа с под-проекти|SBTSubProjects]]
 1. [[Working with public assets|Assets]]
     1. [[Използване на CoffeeScript|AssetsCoffeeScript]]
     1. [[Използване на LESS CSS|AssetsLess]]

@@ -13,39 +13,39 @@
 
 Play се разпространява чрез т.нар. [Typesafe Activator](http://typesafe.com/activator). Typesafe Activator provides the build tool (sbt) that Play is built on, and also provides many templates and tutorials to help get you started with writing new applications.
 
-Download the latest [Activator distribution](https://typesafe.com/platform/getstarted) and extract the archive to a location where you have both read **and write** access. (Running `activator` writes some files to directories within the distribution, so don't install to `/opt`, `/usr/local` or anywhere else you’d need special permission to write to.)
+Изтеглете най-новата [версия на Activator-а](https://typesafe.com/platform/getstarted) и екстрахирайте архива в директория, за която има права за четене **и писане**. (При стартирането на `activator` се създават някои файлове в директорията, така че не инсталирайте в `/opt`, `/usr/local` или на подобни места, които изискват специални права за достъп.)
 
-## Add the activator script to your PATH
+## Добавяне на activator script-а към PATH променливата
 
-For convenience, you should add the Activator installation directory to your system `PATH`. On UNIX systems, this means doing something like:
+За улеснение е добре да добавите инсталационната директория на Activator-а към системната променлива `PATH`. При UNIX системите това обикновено става така:
 
 ```bash
 export PATH=/path/to/activator:$PATH
 ```
 
-On Windows you’ll need to set it in the global environment variables. This means update the `PATH` in the environment variables and don't use a path with spaces.
+Под Windows трябва да промените глобалните системни променливи: добавете директорията към `PATH` променливата и не използвайте директория с интервали в името.
 
-> If you’re on UNIX, make sure that the `activator` script is executable.
+> Под UNIX се уверете, че скриптът `activator` е изпълняем.
 > 
-> Otherwise do a:
+> Ако се налага, използвайте:
 > ```bash
 > chmod a+x /path/to/activator
 > ```
 
-> If you're behind a proxy make sure to define it with `set HTTP_PROXY=http://<host>:<port>` on Windows or `export  HTTP_PROXY=http://<host>:<port>` on UNIX.
+> Ако сте зад прокси-сървър се уверете, че това е дефинирано: `set HTTP_PROXY=http://<host>:<port>` под Windows или `export  HTTP_PROXY=http://<host>:<port>` под UNIX.
 
-## Check that the activator command is available
+## Уверете се, че командата activator съществува
 
-From a shell, launch the `activator -help` command. 
+От терминала стартирайте командата `activator -help`. 
 
 ```bash
 $ activator -help
 ```
 
-If everything is properly installed, you should see the basic help:
+Ако всичко е инсталирано по ред ще видите помощния екран:
 
 [[images/activator.png]]
 
-You are now ready to create a new Play application.
+Вече сте готови да създадете ново Play приложение.
 
 > **Напред:** [[Създаване на ново приложение | NewApplication]]

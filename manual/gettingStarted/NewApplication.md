@@ -1,56 +1,56 @@
 <!--- Copyright (C) 2009-2013 Typesafe Inc. <http://www.typesafe.com> -->
-# Creating a new application
+# Създаване на ново приложение
 
-## Create a new application with the activator command
+## Създаване на ново приложение чрез activator командата
 
-The `activator` command can be used to create a new Play application.  Activator allows you to select a template that your new application should be based off.  For vanilla Play projects, the names of these templates are `play-scala` for Scala based Play applications, and `play-java` for Java based Play applications.
+Командата `activator` може да бъде използвана за създаване на ново Play приложение. Activator-ът дава възможност да изберете темплейт, на който да се базира новото ви приложение. За обикновените Play проекти използвайте `play-scala` (за Scala базирани Play приложения) и `play-java` (за Java базирани Play приложения).
 
-> Note that choosing a template for either Scala or Java at this point does not imply that you can’t change language later. For example, you can create a new application using the default Java application template and start adding Scala code whenever you like.
+> Забележете, че ако на този етап изберете темплейт за Scala или Java, това не означава, че не можете да промените езика по-късно. Например можете да създадете ново приложение със стандартния Java темплейт и да добавите Scala код когато решите.
 
-To create a new vanilla Play Scala application, run:
+За да създадете стандартно Play Scala приложение, изпълнете:
 
 ```bash
 $ activator new my-first-app play-scala
 ```
 
-To create a new vanilla Play Java application, run:
+За да създадете стандартно Play Java приложение, изпълнете:
 
 ```bash
 $ activator new my-first-app play-java
 ```
 
-In either case, you can replace `my-first-app` with whatever name you want your application to use.  Activator will use this as the directory name to create the application in.  You can change this name later if you choose.
+И в двата случая можете да замените `my-first-app` с име по желание. Activator-ът ще използва това име и за името на директорията, в която да създаде приложението. Името може да бъде променяно на по-късен етап.
 
 [[images/activatorNew.png]]
 
-Once the application has been created you can use the `activator` command again to enter the [[Play console|PlayConsole]].
+След като приложението е създадено, използвайте командата `activator` отново, за да влезете в [[Play конзолата|PlayConsole]].
 
 ```bash
 $ cd my-first-app
 $ activator
 ```
 
-> If you wish to use other Activator templates, you can do this by running `activator new`.  This will prompt you for an application name, and then give you a chance to browse and select an appropriate template.
+> Ако искате да използвате други Activator темплейти можете да изпълните `activator new`.  Ще бъдете попитани за име на приложението и ще имате възможност да разгледате темплейтите и да изберете подходящ.
 
-## Create a new application with the Activator UI
+## Създаване на ново приложение чрез графичния интерфейс на Activator-а (Activator UI)
 
-New Play applications can also be created with the Activator UI.  To use the Activator UI, run:
+Можете да създавате Play приложения и чрез Activator UI.  За тази цел изпълнете:
 
 ```bash
 $ activator ui
 ```
 
-You can read the documentation for using the Activator UI [here](https://typesafe.com/activator/docs).
+Документация как да използвате Activator UI можете да намерите [тук](https://typesafe.com/activator/docs).
 
-## Create a new application without Activator
+## Създаване на ново приложение без Activator-а
 
-It is also possible to create a new Play application without installing Activator, using sbt directly.
+Възможно е да създадете ново Play приложение и без да инсталирате Activator-а, използвайки sbt директно.
 
-> First install [sbt](http://www.scala-sbt.org/) if needed.
+> Първо инсталирайте [sbt](http://www.scala-sbt.org/), ако е нужно.
 
-Create a new directory for your new application and configure your sbt build script with two additions.
+Създайте нова директория за приложението и конфигурирайте sbt build скрипта по следния начин.
 
-In `project/plugins.sbt`, add:
+В `project/plugins.sbt` добавете:
 
 ```scala
 // The Typesafe repository 
@@ -60,14 +60,14 @@ resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/release
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "%PLAY_VERSION%")
 ```
 
-Be sure to replace `%PLAY_VERSION%` here by the exact version you want to use. If you want to use a snapshot version, you will have to specify this additional resolver: 
+Уверете се, че сте заменили `%PLAY_VERSION%` с версията, която искате да използвате. Ако искате да използвате snapshot версия, трябва да добавите този resolver: 
 
 ```
 // Typesafe snapshots
 resolvers += "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/"
 ```
 
-In `build.sbt` for Java projects:
+В `build.sbt` за Java проекти:
 
 ```scala
 name := "my-first-app"
@@ -77,7 +77,7 @@ version := "1.0"
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
 ```
 
-...or Scala projects:
+...или Scala проекти:
 
 ```scala
 name := "my-first-app"
@@ -87,13 +87,13 @@ version := "1.0.0-SNAPSHOT"
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 ```
 
-You can then launch the sbt console in this directory:
+След това можете да стартирате sbt конзолата в директорията:
 
 ```bash
 $ cd my-first-app
 $ sbt
 ```
 
-sbt will load your project and fetch the dependencies.
+sbt ще зареди проекта и ще изтегли зависимостите.
 
-> **Next:** [[Anatomy of a Play application|Anatomy]]
+> **Напред:** [[Анатомия на Play приложението|Anatomy]]

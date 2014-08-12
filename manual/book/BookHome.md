@@ -1,19 +1,19 @@
 <!--- Copyright (C) 2009-2013 Typesafe Inc. <http://www.typesafe.com> -->
-# Play documentation
+# Play документация
 
-Play is a high-productivity Java and Scala web application framework that integrates the components and APIs you need for modern web application development. 
+Play е Java и Scala framework за уеб приложения, който съдържа компонентите и API (приложно-програмни интерфейси), които са нужни за разработка на модерни уеб приложения. 
 
-Play is based on a lightweight, stateless, web-friendly architecture and features predictable and minimal resource consumption (CPU, memory, threads) for highly-scalable applications, thanks to its reactive model, based on Iteratee IO.
+Play базира на олекотена, stateless, уеб-ориентирана архитектура и се отличава с предвидима и минимална консумация на ресурси (CPU, памет, нишки) за високо мащабируеми приложения, благодарение на реактивния си модел, базиран на Iteratee IO.
 
-1. About
+1. За
 1. Getting started
-1. [[Play for Scala developers | ScalaHome]]
+1. [[Play за Scala разработчици | ScalaHome]]
     1. [[HTTP programming | ScalaActions]]
     1. [[Asynchronous HTTP programming | ScalaAsync]]
     1. [[The template engine | ScalaTemplates]]
     1. [[HTTP form submission and validation | ScalaForms]]
-    1. [[Working with JSON | ScalaJson]]
-    1. [[Working with XML | ScalaXmlRequests]]
+    1. [[Работа с JSON | ScalaJson]]
+    1. [[Работа с XML | ScalaXmlRequests]]
     1. [[Handling file upload | ScalaFileUpload]]
     1. [[Accessing an SQL database | ScalaDatabase]]
     1. [[Using the cache | ScalaCache]]
@@ -23,13 +23,13 @@ Play is based on a lightweight, stateless, web-friendly architecture and feature
     1. [[The application Global object | ScalaGlobal]]
     1. [[Testing your application | ScalaTestingYourApplication]]
     1. [[Handling data streams reactively | Iteratees]]
-1. [[Play for Java developers | JavaHome]]
+1. [[Play за Java разработчици | JavaHome]]
     1. [[HTTP programming | JavaActions]]
     1. [[Asynchronous HTTP programming | JavaAsync]]
     1. [[The template engine | JavaTemplates]]
     1. [[HTTP form submission and validation | JavaForms]]
-    1. [[Working with JSON | JavaJsonActions]]
-    1. [[Working with XML | JavaXmlRequests]]
+    1. [[Работа с JSON | JavaJsonActions]]
+    1. [[Работа с XML | JavaXmlRequests]]
     1. [[Handling file upload | JavaFileUpload]]
     1. [[Accessing an SQL database | JavaDatabase]]
     1. [[Using the cache | JavaCache]]
@@ -38,8 +38,8 @@ Play is based on a lightweight, stateless, web-friendly architecture and feature
     1. [[Internationalization | JavaI18N]]
     1. [[The application Global object | JavaGlobal]]
     1. [[Testing your application | JavaTest]]
-1. Detailed topics
-    1. [[The build system | Build]]
+1. Подробни теми
+    1. [[Build системата | Build]]
     1. [[Working with public assets | Assets]]
     1. [[Managing database evolutions | Evolutions]]
     1. [[Configuration file syntax and features | Configuration]]

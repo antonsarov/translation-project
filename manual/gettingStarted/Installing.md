@@ -1,17 +1,17 @@
 <!--- Copyright (C) 2009-2013 Typesafe Inc. <http://www.typesafe.com> -->
-# Installing Play
+# Инсталация на Play
 
-## Prerequisites
+## Предпоставки
 
-To run the Play framework, you need [JDK 6 or later](http://www.oracle.com/technetwork/java/javase/downloads/index.html). 
+За да стартирате Play framework-а ви трябва [JDK 6 или по-нова версия](http://www.oracle.com/technetwork/java/javase/downloads/index.html). 
 
-> If you are using MacOS, Java is built-in. If you are using Linux, make sure to use either the Sun JDK or OpenJDK (and not gcj, which is the default Java command on many Linux distros). If you are using Windows, just download and install the latest JDK package.
+> Ако използвате MacOS, Java е вградена. Ако използвате Linux, уверете се, че използвате или Sun JDK, или OpenJDK (а не gcj, което е Java командата по подразбиране при много Linux дистрибуции). Ако използвате Windows просто изтеглете и инсталирайте най-новата JDK версия.
 
-Be sure to have the `java` and `javac` commands in the current path (you can check this by typing `java -version` and `javac -version` at the shell prompt). 
+Уверете се, че `java` and `javac` командите са достъпни в цялата система (можете да проверите това като напишете `java -version` и `javac -version` в командния прозорец). 
 
-## Install Activator
+## Инсталация на Activator-а
 
-Play is distributed through a tool called [Typesafe Activator](http://typesafe.com/activator).  Typesafe Activator provides the build tool (sbt) that Play is built on, and also provides many templates and tutorials to help get you started with writing new applications.
+Play се разпространява чрез т.нар. [Typesafe Activator](http://typesafe.com/activator). Typesafe Activator provides the build tool (sbt) that Play is built on, and also provides many templates and tutorials to help get you started with writing new applications.
 
 Download the latest [Activator distribution](https://typesafe.com/platform/getstarted) and extract the archive to a location where you have both read **and write** access. (Running `activator` writes some files to directories within the distribution, so don't install to `/opt`, `/usr/local` or anywhere else you’d need special permission to write to.)
 
@@ -48,4 +48,4 @@ If everything is properly installed, you should see the basic help:
 
 You are now ready to create a new Play application.
 
-> **Next:** [[Creating a new application | NewApplication]]
+> **Напред:** [[Създаване на ново приложение | NewApplication]]

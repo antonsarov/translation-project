@@ -1,11 +1,11 @@
 <!--- Copyright (C) 2009-2013 Typesafe Inc. <http://www.typesafe.com> -->
-# Using the Play console
+# Използване на Play конзолата
 
-## Launching the console
+## Стартиране на конзолата
 
-The Play console is a development console based on sbt that allows you to manage a Play application’s complete development cycle.
+Play конзолата е конзола за разработка, базирана на sbt, която ви дава възможност да управлявате целия цикъл на разработка на едно Play приложение.
 
-To launch the Play console, change to the directory of your project, and run Activator:
+За да стартирате Play конзолата отидете в директорията на проекта ви и стартирайте Activator-а:
 
 ```bash
 $ cd my-first-app
@@ -14,17 +14,17 @@ $ activator
 
 [[images/console.png]]
 
-## Getting help
+## Получаване на помощ
 
-Use the `help` command to get basic help about the available commands.  You can also use this with a specific command to get information about that command:
+Използвайте командата `help`, за да видите основна помощна информация за наличните команди.  Можете да направите това и с конкретна команда, за да получите информация за командата:
 
 ```bash
 [my-first-app] $ help run
 ```
 
-## Running the server in development mode
+## Стартиране на сървъра в модус за разработка
 
-To run the current application in development mode, use the `run` command:
+За да стартирате приложението в модус за разработка използвайте командата `run`:
 
 ```bash
 [my-first-app] $ run
@@ -32,17 +32,17 @@ To run the current application in development mode, use the `run` command:
 
 [[images/consoleRun.png]]
 
-In this mode, the server will be launched with the auto-reload feature enabled, meaning that for each request Play will check your project and recompile required sources. If needed the application will restart automatically.
+Докато сте в този модус сървърът е стартиран с включен режим на автоматично презареждане, което означава, че за всяка заявка Play ще провери проекта и ще компилира необходимия код. Ако е нужно, приложението ще бъде рестартирано автоматично.
 
-If there are any compilation errors you will see the result of the compilation directly in your browser:
+Ако има някакви грешки при компилация, ще видите резултата от компилацията директно в браузера:
 
 [[images/errorPage.png]]
 
-To stop the server, type `Crtl+D` key, and you will be returned to the Play console prompt.
+За да спрете сървъра, натиснете `Crtl+D`, което ще ви върне към Play конзолата.
 
-## Compiling
+## Компилация
 
-In Play you can also compile your application without running the server. Just use the `compile` command:
+С Play можете да компилирате приложението си и без да стартирате сървъра. Просто използвайте командата `compile`:
 
 ```bash
 [my-first-app] $ compile
@@ -50,64 +50,64 @@ In Play you can also compile your application without running the server. Just u
 
 [[images/consoleCompile.png]]
 
-## Launch the interactive console
+## Стартиране на интерактивната конзола
 
-Type `console` to enter the interactive Scala console, which allows you to test your code interactively:
+Напишете `console`, за да влезете в интерактивната Scala конзола, която ви позволява да тествате кода си интерактивно:
 
 ```bash
 [my-first-app] $ console
 ```
 
-To start application inside scala console (e.g to access database):
+За да стартирате приложение от scala конзолата (например за да имате достъп до базата данни):
 ```bash
 scala> new play.core.StaticApplication(new java.io.File("."))
 ```
 
 [[images/consoleEval.png]] 
 
-## Debugging
+## Дебъгване
 
-You can ask Play to start a **JPDA** debug port when starting the console. You can then connect using Java debugger. Use the `activator -jvm-debug <port>` command to do that:
+Play може да стартира **JPDA** порт за дебъгване, когато се стартира конзолата. След това можете да се свържете с някой Java debugger. Използвайте командата `activator -jvm-debug <port>`, за да направите това:
 
 ```
 $ activator -jvm-debug 9999
 ```
 
-When a JPDA port is available, the JVM will log this line during boot:
+Ако JPDA порт е налице, JVM ще обозначи това при стартиране:
 
 ```
 Listening for transport dt_socket at address: 9999
 ```
 
-## Using sbt features
+## Използване на sbt функционалности
 
-The Play console is just a normal sbt console, so you can use sbt features such as **triggered execution**. 
+Play конзолата е съвсем нормална sbt конзола, така че можете да използвате sbt функционалности като **triggered execution**. 
 
-For example, using `~ compile`
+Използвайте например `~ compile`
 
 ```bash
 [my-first-app] $ ~ compile
 ```
 
-The compilation will be triggered each time you change a source file.
+Компилацията ще се задейства всеки път, когато промените файл с изходен код.
 
-If you are using `~ run`
+Ако използвате `~ run`
 
 ```bash
 [my-first-app] $ ~ run
 ```
 
-The triggered compilation will be enabled while a development server is running.
+компилацията ще бъде задействана докато сървърът работи.
 
-You can also do the same for `~ test`, to continuously test your project each time you modify a source file:
+Можете да използвате и `~ test`, за да тествате проекта си непрекъснато при всяко промяна на файл с код:
 
 ```bash
 [my-first-app] $ ~ test
 ```
 
-## Using the play commands directly
+## Директно използване на play командите
 
-You can also run commands directly without entering the Play console. For example, enter `activator run`:
+Можете да стартирате командите и без да влизате в Play конзолата. Напишете например `activator run`:
 
 ```bash
 $ activator run
@@ -121,6 +121,6 @@ $ activator run
 (Server started, use Ctrl+D to stop and go back to the console...)
 ```
 
-The application starts directly. When you quit the server using `Ctrl+D`, you will come back to your OS prompt.
+Приложението стартира директно. Когато спрете сървъра чрез `Ctrl+D` ще се върнете към терминала.
 
-> **Next:** [[Setting-up your preferred IDE | IDE]]
+> **Напред:** [[Настройка на предпочитаната среда за разработка (IDE) | IDE]]

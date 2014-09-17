@@ -1,27 +1,27 @@
 <!--- Copyright (C) 2009-2013 Typesafe Inc. <http://www.typesafe.com> -->
-# Setting up your preferred IDE
+# Настройка на предпочитаната среда за разработка (IDE)
 
-Working with Play is easy. You don’t even need a sophisticated IDE, because Play compiles and refreshes the modifications you make to your source files automatically, so you can easily work using a simple text editor.
+Да се работи с Play е лесно. Дори не е нужна специална среда за разработка, защото Play автоматично компилира и обновява промените, които правите по файловете с изходен код, така че можете да използвате и обикновен текстов редактор.
 
-However, using a modern Java or Scala IDE provides cool productivity features like auto-completion, on-the-fly compilation, assisted refactoring and debugging.
+Все пак използването на модерни среди за разработка за Java или Scala ви носи предимства като автоматично допълване на думите, компилация на място, рефакторизиране и дебъгване.
 
 ## Eclipse
 
-### Generate configuration
+### Генериране на конфигурацията
 
-Play provides a command to simplify Eclipse configuration. To transform a Play application into a working Eclipse project, use the `eclipse` command:
+Play има команда за улесняване на конфигурацията на Eclipse. За да преобразувате едно Play приложение в работещ проект под Eclipse, използвайте командата `eclipse`:
 
 ```
 [my-first-app] $ eclipse
 ```
 
-If you want to grab the available source jars (this will take longer and it's possible a few sources might be missing):
+Ако искате да вземете и наличните библиотеки с изходен код (това ще отнеме повече време, а и някои от тях може да липсват):
 
 ```
 [my-first-app] $ eclipse with-source=true
 ```
 
-> Note if you are using sub-projects with aggregate, you would need to set `skipParents` appropriately in `build.sbt`:
+> Забележете, че ако използвате под-проекти, трябва да декларирате `skipParents` съответно в `build.sbt`:
 
 ```
 import com.typesafe.sbteclipse.core.EclipsePlugin.EclipseKeys
@@ -29,98 +29,98 @@ import com.typesafe.sbteclipse.core.EclipsePlugin.EclipseKeys
 EclipseKeys.skipParents in ThisBuild := false
 ```
 
-or from the play console, type:
+или в play конзолата напишете:
 
 ``` 
 [my-first-app] $ eclipse skip-parents=false
 ```
 
-> Also, if you did not want to trigger a compilation before running `eclipse`, then just add the following to your settings:
+> Освен това, ако не искате компилацията да се включи преди извикването на `eclipse`, тогава просто добавете това към настройките:
 
 ```
 EclipsePlugin.EclipseKeys.preTasks := Seq()
 ```
 
-You then need to import the application into your Workspace with the **File/Import/General/Existing project…** menu (compile your project first).
+След това трябва да импортиране приложението в Workspace-а чрез менюто **File/Import/General/Existing project…** (първо компилирайте проекта).
 
 [[images/eclipse.png]] 
 
-To debug, start your application with `activator -jvm-debug 9999 run` and in Eclipse right-click on the project and select **Debug As**, **Debug Configurations**. In the **Debug Configurations** dialog, right-click on **Remote Java Application** and select **New**. Change **Port** to 9999 and click **Apply**. From now on you can click on **Debug** to connect to the running application. Stopping the debugging session will not stop the server.
+За да дебъгвате стартирайте приложението чрез `activator -jvm-debug 9999 run` и в Eclipse изберете **Debug As**, **Debug Configurations** от контекстното меню на проекта. В диалоговия прозорец **Debug Configurations** натиснете с десен бутон върху **Remote Java Application** и изберете **New**. Променете **Port** на 9999 и натиснете **Apply**. Сега можете да натиснете **Debug**, за да се свържете със стартираното приложение. Ако спрете дебъг-сесията това няма да спре сървъра.
 
-> **Tip**: You can run your application using `~run` to enable direct compilation on file change. This way scala template files are auto discovered when you create a new template in `view` and auto compiled when the file changes. If you use normal `run` then you have to hit `Refresh` on your browser each time.
+> **Съвет**: Можете да стартирате приложението си чрез `~run`, за да включите директната компилация при промяна на файла. По този начин scala темплейт файловете биват автоматично разпознати, когато създадете нов темплейт във `view` и автоматично компилирани, когато файлът бъде променен. Ако използвате само `run`, тогава трябва да обновите страницата в браузера (`Refresh`).
 
-If you make any important changes to your application, such as changing the classpath, use `eclipse` again to regenerate the configuration files.
+Ако правите някакви важни промени по приложенито ви, като например промяна на classpath, използвайте `eclipse` командата, за да генерирате конфигурационните файлове отново.
 
-> **Tip**: Do not commit Eclipse configuration files when you work in a team!
+> **Съвет**: Не публикувайте конфигурационните файлове на Eclipse, когато работите в екип!
 
-The generated configuration files contain absolute references to your framework installation. These are specific to your own installation. When you work in a team, each developer must keep his Eclipse configuration files private.
+Генерираните конфигурационни файлове съдържат абсолютни референции към специфичната за вас инсталация. Когато работите в екип всеки разработчик трябва да държи конфигурационните файлове на Eclipse при себе си.
 
 ## IntelliJ
 
-Intellij IDEA lets you quickly create a Play application without using a command prompt. You don't need to configure anything outside of the IDE, the SBT build tool takes care of downloading appropriate libraries, resolving dependencies and building the project.
+Intellij IDEA ви дава възможност да създавате Play приложения без да използвате терминала. Няма нужда да конфигурирате каквото и да било извън средата за разработка, SBT build tool се грижи за изтеглянето на подходящите библиотеки, разкриването на зависимости и създаването на проекта.
 
-Before you start creating a Play application in IntelliJ IDEA, make sure that the latest Scala (if you develop with Scala) and 
-Play 2 plugins are enabled in IntelliJ IDEA.
+Преди да започнете да създавате Play приложения с IntelliJ IDEA се уверете, че актуалните плъгини за Scala (ако разработвате със Scala) и Play 2 са активирани в IntelliJ IDEA.
 
-To create a Play application:
+За да създадете Play приложение:
 
-- Open ***New Project*** wizard, select ***Play 2.x*** under ***Scala*** section and click ***Next***.
+- Отворете ***New Project*** съветника, изберете ***Play 2.x*** в ***Scala*** секцията и натиснете ***Next***.
 - Enter your project's information and click ***Finish***.
 
-IntelliJ IDEA creates an empty application using SBT.
+IntelliJ IDEA ще създаде празно приложение с SBT.
 
-You can also import an existing Play project.
+Можете и да импортирате вече съществуващ Play проект.
 
-To import a Play project:
-- Open Project wizard, select ***Import Project***.
-- In the window that opens, select a project you want to import and click ***OK***.
-- On the next page of the wizard, select ***Import project from external model*** option, choose ***SBT project*** and click ***Next***. 
-- On the next page of the wizard, select additional import options and click ***Finish***. 
+За да импортирате Play проект:
 
-Check the project's structure, make sure all necessary dependencies are downloaded.
-You can use code assistance, navigation and on-the-fly code analysis features.
+- Отворете Project съветника, изберете ***Import Project***.
+- В прозореца изберете проекта, който искате да импортирате и натиснете ***OK***.
+- На следващата страница от съветника изберете опцията ***Import project from external model***, изберете ***SBT project*** и натиснете ***Next***. 
+- На следващата страница от съветника изберете допълнителни опции при импортирането и натиснете ***Finish***. 
 
-You can run the created application and view the result in the default browser `http://localhost:9000`. 
+Проверете структурата на проекта, уверете се, че необходимите зависимости са изтеглени.
+Можете да използвате асистентите при писане на код, навигация и функциите за анализиране на код.
 
-To run a Play application:
--	In the project tree, right-click the application.
--	From the list in the context menu, select ***Run Pla2 App***.
+Можете да стартирате създаденото приложение и да видите резултата в браузера `http://localhost:9000`. 
 
-You can easily start a debugger session for a Play application using default Run/Debug Configuration settings.
+За да стартирате Play приложение:
+-	В project областта, натиснете с десен бутон върху приложението.
+-	От контекстното меню изберете ***Run Pla2 App***.
 
-For more detailed information, see the Play Framework 2.x tutorial at the following URL:
+Можете да стартирате дебъг сесия за всяко Play приложение чрез стандартните Run/Debug Configuration настройки.
+
+За по-детайлна информация, вижте Play Framework 2.x урока тук:
 
 <http://confluence.jetbrains.com/display/IntelliJIDEA/Play+Framework+2.0> 
 
 
 ## Netbeans
 
-### Generate Configuration
+### Генериране на конфигурацията
 
-Play does not have native Netbeans project generation support at this time.
+За момента Play не поддържа генериране на Netbeans проекти.
 
 
 ## ENSIME
 
-### Install ENSIME
+### Инсталиране на ENSIME
 
-Follow the installation instructions at <https://github.com/ensime/ensime-emacs>
+Следвайте инструкциите за инсталация на <https://github.com/ensime/ensime-emacs>
 
-### Generate configuration
+### Генериране на конфигурацията
 
-Edit your project/plugins.sbt file, and add the following line (you should first check <https://github.com/ensime/ensime-sbt> for the latest version of the plugin):
+Редактирайте файла project/plugins.sbt и добавете следния ред (първо проверете на <https://github.com/ensime/ensime-sbt> за най-новата версия на плъгина):
 
 ```
 addSbtPlugin("org.ensime" % "ensime-sbt" % "0.1.5-SNAPSHOT")
 ```
 
-Start Play:
+Стартирайте Play:
 
 ```
 $ activator
 ```
 
-Enter 'ensime generate' at the play console. The plugin should generate a .ensime file in the root of your Play project.
+Напишете 'ensime generate' в play конзолата. Плъгинът ще генерира един .ensime файл в основата на Play проекта.
 
 ```
 $ [MYPROJECT] ensime generate
@@ -154,34 +154,34 @@ $ [MYPROJECT] ensime generate
 [info] Wrote configuration to .ensime
 ```
 
-### Start ENSIME
+### Стартиране на ENSIME
 
-From Emacs, execute M-x ensime and follow the on-screen instructions.
+От Emacs, стартирайте M-x ensime и следвайте инструкциите на екрана.
 
-That's all there is to it. You should now get type-checking, completion, etc. for your Play project. Note, if you add new library dependencies to your play project, you'll need to re-run "ensime generate" and re-launch ENSIME.
+Това е всичко. Сега трябва да имате работеща проверка на типовете, допълване и т.н. Забележете, че ако добавяте нови библиотеки към play проекта, ще се наложи да извикате "ensime generate" отново и да рестартирате ENSIME.
 
-### More Information
+### Повече информация
 
-Check out the ENSIME README at <https://github.com/ensime/ensime-emacs>.
-If you have questions, post them in the ensime group at <https://groups.google.com/forum/?fromgroups=#!forum/ensime>.
+Вижте ENSIME README на <https://github.com/ensime/ensime-emacs>.
+Ако имате въпроси, пишете на групата ensime на <https://groups.google.com/forum/?fromgroups=#!forum/ensime>.
 
 
-## All Scala Plugins if needed
+## Всики Scala плъгини, ако са нужни
 
-Scala is a newer programming language, so the functionality is provided in plugins rather than in the core IDE.
+Scala е по-нов език за програмиране, така че функционалността се предлага под формата на плъгини, а не в основата на средите за разработка.
 
 - Eclipse Scala IDE: <http://scala-ide.org/>
 - NetBeans Scala Plugin: <https://java.net/projects/nbscala>
 - IntelliJ IDEA Scala Plugin: <http://confluence.jetbrains.net/display/SCA/Scala+Plugin+for+IntelliJ+IDEA>
-- IntelliJ IDEA's plugin is under active development, and so using the nightly build may give you additional functionality at the cost of some minor hiccups.
+- Плъгинът в IntelliJ IDEA е в активна разработка и затова използването на nightly build може да ви даде допълнителна функционалност за сметка на някои малки недостатъци.
 - Nika (11.x) Plugin Repository: <http://www.jetbrains.com/idea/plugins/scala-nightly-nika.xml>
 - Leda (12.x) Plugin Repository: <http://www.jetbrains.com/idea/plugins/scala-nightly-leda.xml>
-- IntelliJ IDEA Play plugin (available only for Leda 12.x): <http://plugins.intellij.net/plugin/?idea&pluginId=7080>
-- ENSIME - Scala IDE Mode for Emacs: <https://github.com/aemoncannon/ensime>
-(see below for ENSIME/Play instructions)
+- IntelliJ IDEA Play plugin (наличен само за Leda 12.x): <http://plugins.intellij.net/plugin/?idea&pluginId=7080>
+- ENSIME - Scala IDE Mode за Emacs: <https://github.com/aemoncannon/ensime>
+(виж по-горе за инструкции относно ENSIME/Play)
 
 &nbsp;
 
-> **Next:** 
+> **Напред:** 
 >
-> – [[Play Tutorials|Tutorials]]
+> – [[Play уроци|Tutorials]]
